@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeSquad Bootcamp 2027 ✨</title>
+  <meta name="description" content="My free, part-time, remote CodeSquad bootcamp journey for 2027." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <span class="sticker">🎉 I'm in!</span>
+    <h1>CodeSquad <span class="hl">Bootcamp</span></h1>
+    <p class="tagline">My 2027 adventure from <code>Hello, World!</code> to full-stack.</p>
+    <div class="badges">
+      <span class="badge badge-free">💸 Free</span>
+      <span class="badge">🕒 Part-Time</span>
+      <span class="badge">🏡 Remote</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>📅 2027 Schedule</h2>
+      <ol class="timeline">
+        <li>
+          <span class="dot dot-pre"></span>
+          <div>
+            <h3>Pre-Course</h3>
+            <p>Nov 23 – Dec 13, 2026</p>
+          </div>
+        </li>
+        <li>
+          <span class="dot dot-live"></span>
+          <div>
+            <h3>Live Classes</h3>
+            <p>Jan 4 – Jun 26, 2027</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="times">
+        <div class="time-pill">
+          <strong>Mon – Wed</strong>
+          <span>6:30 PM – 9:00 PM EST</span>
+        </div>
+        <div class="time-pill">
+          <strong>Saturday</strong>
+          <span>9:00 AM – 2:00 PM EST</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>🧰 Skills I'll Learn</h2>
+      <p class="intro">
+        Learn JavaScript, React, HTML &amp; CSS to create dynamic websites. Add back-end frameworks,
+        plus database and authentication tools to build full-stack web applications. Use AI tools to
+        speed up development and find errors faster. Job-ready skills are integrated throughout.
+      </p>
+
+      <div class="skills">
+        <div class="skill-group">
+          <h3>🎨 Front-End</h3>
+          <ul class="chips">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>⚙️ Back-End</h3>
+          <ul class="chips">
+            <li>Node</li><li>Express</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>🗄️ Data &amp; Auth</h3>
+          <ul class="chips">
+            <li>MongoDB</li><li>Mongoose</li><li>Authentication</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>🤖 AI Tools</h3>
+          <ul class="chips">
+            <li>Langchain</li><li>LLM APIs</li><li>AI-assisted debugging</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card countdown-card">
+      <h2>⏳ Countdown to Day One</h2>
+      <p id="countdown" class="countdown" aria-live="polite">Calculating…</p>
+      <p class="small">until live classes begin on Jan 4, 2027</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with 💜 and a lot of curly braces <code>{ }</code></p>
+  </footer>
+
+  <script>
+    (function () {
+      var el = document.getElementById("countdown");
+      var start = new Date(2027, 0, 4, 18, 30); // Jan 4, 2027, 6:30 PM (local time)
+      function tick() {
+        var diff = start - new Date();
+        if (diff <= 0) {
+          el.textContent = "Class is in session! 🚀";
+          return;
+        }
+        var d = Math.floor(diff / 864e5);
+        var h = Math.floor(diff / 36e5) % 24;
+        var m = Math.floor(diff / 6e4) % 60;
+        el.textContent = d + " days, " + h + " hrs, " + m + " min";
+      }
+      tick();
+      setInterval(tick, 30000);
+    })();
+  </script>
+</body>
+</html>
